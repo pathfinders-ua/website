@@ -5,8 +5,13 @@ module.exports = <Partial<Config>>{
    theme: {
       extend: {
          fontFamily: {
-            sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+            sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+            display: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
          },
       },
    },
+   plugins: [
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/forms'),
+   ],
 }
