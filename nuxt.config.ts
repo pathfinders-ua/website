@@ -37,7 +37,7 @@ export default defineNuxtConfig({
          meta: [
             { name: 'description', content: "Пам'ятні перлини для слідопитів та шукачів пригод на 2023 рік" },
             { name: 'msapplication-TileColor', content: '#ffffff' },
-            { name: 'theme-color', content: '#0055a0' },
+            { name: 'theme-color', content: '#1e293b' },
          ],
       },
    },
