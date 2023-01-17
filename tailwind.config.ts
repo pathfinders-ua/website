@@ -10,6 +10,9 @@ module.exports = <Partial<Config>>{
          },
       },
    },
+   future: {
+      hoverOnlyWhenSupported: true,
+   },
    plugins: [
       require('@tailwindcss/typography'),
       require('@tailwindcss/forms'),
