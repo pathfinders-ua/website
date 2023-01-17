@@ -13,7 +13,7 @@ useHead({
       <Body class="h-full" />
    </Html>
 
-   <div class="h-full bg-slate-50">
+   <div class="min-h-full bg-slate-50">
       <TheHeader />
       
       <main class="py-8 sm:px-6 lg:px-8">
