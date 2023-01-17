@@ -1,13 +1,15 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('gem', () => queryContent('/gems/q' + useRoute().params.quarter).findOne())
+const { data: quarter } = await useAsyncData('gem', () => queryContent('/gems/q' + useRoute().params.quarter).findOne())
+
+useHead({
+   title: quarter.value?.title
+})
 </script>
 
 <template>
-   <main class="py-8 px-6 lg:px-8">
-      <div class="mx-auto max-w-prose">
-         <pre>
-            {{ data }}
-         </pre>
-      </div>
-   </main>
+   <div class="mx-auto max-w-prose">
+      <pre>
+         {{ quarter }}
+      </pre>
+   </div>
 </template>

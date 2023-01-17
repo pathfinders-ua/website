@@ -5,7 +5,7 @@
             <TheLogo class="h-8 w-auto" />
          </NuxtLink>
          <nav class="flex items-center gap-4">
-            <NuxtLink to="/gems" class="border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Пам'ятні перлини</NuxtLink>
+            <NuxtLink to="/gems" class="whitespace-nowrap border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Пам'ятні перлини</NuxtLink>
          </nav>
       </div>
    </header>
