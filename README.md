@@ -1,42 +1,35 @@
 # Пам'ятні перлини 2023
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Доступ до API
 
-## Setup
+API є відкритим, нижче наведено приклад запиту перлин для першого кварталу:
 
-Make sure to install the dependencies:
+```http request
+GET /api/_content/query?_params={"where":{"_path":"/gems/q1","_dir":"gems"}}
+```
+
+## Налаштування
+
+Перегляньте [документацію Nuxt 3](https://nuxt.com/docs/getting-started/introduction), щоб дізнатися більше.
+
+Обов'язково встановіть залежності:
 
 ```bash
-# yarn
 yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
+## Сервер розробки
 
-Start the development server on http://localhost:3000
+Запустіть сервер розробки на http://localhost:3000
 
 ```bash
-npm run dev
+yarn dev
 ```
 
-## Production
+## Продакшн
 
-Build the application for production:
+Локальний попередній перегляд робочої збірки:
 
 ```bash
-npm run build
+yarn preview
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
