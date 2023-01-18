@@ -41,7 +41,7 @@ const goBack = () => {
     <div class="mt-6 overflow-hidden bg-white border-y sm:border border-stone-200 shadow sm:rounded-2xl">
       <ul role="list" class="divide-y divide-stone-200">
         <li v-for="(g, i) in quarter?.gems" :key="g.location">
-          <div v-if="g.text === '<b></b>'" class="flex justify-center px-4 py-4 font-medium">
+          <div v-if="!g.text" class="flex justify-center px-4 py-4 font-medium">
             Немає перлини
           </div>
           <div v-else class="flex items-center px-4 py-4">
