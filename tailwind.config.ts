@@ -11,6 +11,15 @@ module.exports = <Partial<Config>>{
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
         display: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
       },
+      transitionProperty: {
+        height: 'height',
+        width: 'width',
+        spacing: 'margin, padding',
+        border: 'border-radius',
+      },
+      animation: {
+        loader: 'spin 1s steps(8, end) infinite',
+      },
     },
   },
   future: {
