@@ -10,7 +10,7 @@ export default defineNuxtConfig({
    googleFonts: {
       families: {
          'Open Sans': [400, 500, 600, 700],
-         'IBM Plex Sans': true,
+         'IBM Plex Sans': [400, 500, 600, 700],
       },
       display: 'swap',
       preconnect: true,

@@ -5,23 +5,9 @@ useHead({
    title: "Пам'ятні перлини",
 })
 
-const now = useNow()
-
-interface Gem {
-   text: string
-   location: string
-}
-
-const quarter = computed(() => Math.floor((now.value.getMonth() + 3) / 3))
-const week = getWeekNumber(new Date(), quarter.value)
-
-const { data: currentQuarter } = await useAsyncData('current-gem', () => queryContent('/gems/q' + quarter.value).findOne())
 const { data: quarters } = await useAsyncData('all-gems', () => queryContent('/gems').find())
 
-const gem: Gem = {
-   text: currentQuarter.value?.gems?.[week - 1]?.text,
-   location: currentQuarter.value?.gems?.[week - 1]?.location,
-}
+const gem = await getCurrentGem()
 </script>
 
 <template>
@@ -30,7 +16,7 @@ const gem: Gem = {
          <div v-html="gem.text"></div>
          <hr class="my-2 border-stone-200" />
          <div class="flex items-center justify-between font-display">
-            <div>Тиждень {{ week }}</div>
+            <div>Тиждень {{ gem.week }}</div>
             <div>{{ gem.location }}</div>
          </div>
       </div>
