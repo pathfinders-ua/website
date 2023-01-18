@@ -2,8 +2,8 @@
 import {sizes, colors} from '~/utils/getBadgeProperties'
 
 withDefaults(defineProps<{
-  size: Size
-  color: Color | string
+  size?: Size
+  color?: Color | string
 }>(), {
   size: 'base',
   color: 'gray',
