@@ -14,6 +14,7 @@ module.exports = <Partial<Config>>{
       transitionProperty: {
         height: 'height',
         width: 'width',
+        sizes: 'height, width',
         spacing: 'margin, padding',
         border: 'border-radius',
       },
@@ -25,6 +26,7 @@ module.exports = <Partial<Config>>{
   future: {
     hoverOnlyWhenSupported: true,
   },
+  darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
