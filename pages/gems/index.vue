@@ -28,7 +28,7 @@ const gem = await getCurrentGem()
       <div v-html="gem.text"></div>
       <hr class="my-2 border-stone-200" />
       <div class="flex items-center justify-between font-display">
-        <div>тиждень {{ gem.week }}</div>
+        <div>Тиждень {{ gem.week }}</div>
         <div>{{ gem.location }}</div>
       </div>
     </div>
@@ -38,7 +38,7 @@ const gem = await getCurrentGem()
           <NuxtLink :to="'/gems/' + (i + 1)" class="block hover:bg-slate-50">
             <div class="flex items-center px-4 py-4">
               <div class="flex gap-2 sm:gap-4 flex-col sm:flex-row min-w-0 flex-1 items-start sm:items-center font-semibold">
-                <TheBadge size="lg" :color="q.color">квартал {{ i + 1 }}</TheBadge>
+                <TheBadge size="lg" :color="q.color">Квартал {{ i + 1 }}</TheBadge>
                 <div class="pl-0.5 sm:pl-0">{{ q.title }}</div>
               </div>
               <div>
