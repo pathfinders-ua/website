@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from '@heroicons/vue/20/solid/index'
 
-definePageMeta({
+/* definePageMeta({
   pageTransition: {
     mode: 'out-in',
   },
@@ -11,7 +11,7 @@ definePageMeta({
       (from.meta.pageTransition as { name: string }).name = 'slide-right';
     }
   },
-})
+}) */
 
 useHead({
   title: "Пам'ятні перлини",
@@ -42,7 +42,7 @@ const gem = await getCurrentGem()
                 <div class="pl-0.5 sm:pl-0">{{ q.title }}</div>
               </div>
               <div>
-                <ChevronRightIcon class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                <ChevronRightIcon class="h-5 w-5 text-slate-400" aria-hidden="true" height="20" width="20" />
               </div>
             </div>
           </NuxtLink>
