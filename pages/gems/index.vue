@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from '@heroicons/vue/20/solid/index'
 
+definePageMeta({
+  pageTransition: {
+    mode: 'out-in',
+  },
+  middleware: (to, from) => {
+    if (from.name === 'gems-quarter') {
+      (to.meta.pageTransition as { name: string }).name = 'slide-right';
+      (from.meta.pageTransition as { name: string }).name = 'slide-right';
+    }
+  },
+})
+
 useHead({
   title: "Пам'ятні перлини",
 })

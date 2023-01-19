@@ -4,6 +4,17 @@ import type { Ref } from 'vue'
 import { colors } from '~/utils/getBadgeProperties'
 import { ArrowLeftIcon } from '@heroicons/vue/20/solid/index'
 
+definePageMeta({
+  pageTransition: {
+    name: 'slide-left',
+    mode: 'out-in',
+  },
+  middleware: (to, from) => {
+    (to.meta.pageTransition as { name: string }).name = 'slide-left';
+    (from.meta.pageTransition as { name: string }).name = 'slide-left';
+  },
+})
+
 const router = useRouter()
 
 interface Quarter extends ParsedContent {

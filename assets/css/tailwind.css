@@ -1,7 +1,9 @@
+@import "assets/css/transitions.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 #__nuxt {
-   @apply h-full;
+  @apply h-full;
 }
