@@ -2,12 +2,16 @@
 const el = useDocumentElement()
 const { y } = useScroll(el)
 
+const switcherClass = useSwitcherClass()
+const switcherClassWithDefault = ref('hover:bg-slate-700 dark:hover:bg-zinc-700')
+
 defineProps<{
   background?: string
 }>()
 
 onMounted(() => {
   el.value = document
+  switcherClassWithDefault.value = switcherClass.value as string ?? switcherClassWithDefault.value
 })
 </script>
 
@@ -21,7 +25,12 @@ onMounted(() => {
         <NuxtLink to="/gems" class="whitespace-nowrap border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Памʼятні перлини</NuxtLink>
         <NuxtLink to="/honors" class="whitespace-nowrap border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Спеціалізації</NuxtLink>
       </nav>
-      <ColorModeSwither class="ml-auto" :y="y" />
+      <div class="ml-auto flex items-center gap-2">
+        <NuxtLink to="https://github.com/pathfinders-ua/website" target="_blank" class="p-1.5 rounded-full transition-colors" :class="switcherClassWithDefault">
+          <IconGitHub class="h-6 w-6" />
+        </NuxtLink>
+        <ColorModeSwither class="-mb-0.5" :y="y" />
+      </div>
     </div>
   </header>
 </template>

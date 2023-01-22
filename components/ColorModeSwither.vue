@@ -13,7 +13,7 @@ const switcherClass = useSwitcherClass()
 const switcherClassWithDefault = ref('hover:bg-slate-700 dark:hover:bg-zinc-700')
 
 onMounted(() => {
-  switcherClassWithDefault.value = switcherClass.value as string
+  switcherClassWithDefault.value = switcherClass.value as string ?? switcherClassWithDefault.value
 })
 
 const temporallyDisableTransitions = () => {

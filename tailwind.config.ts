@@ -12,6 +12,9 @@ module.exports = <Partial<Config>>{
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
         display: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        '0.25': '0.0625rem',
+      },
       transitionProperty: {
         height: 'height',
         width: 'width',
