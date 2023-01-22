@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import type { Ref } from 'vue'
-import { colors } from '~/utils/getBadgeProperties'
-import { ArrowLeftIcon } from '@heroicons/vue/20/solid/index'
-
-const router = useRouter()
 
 interface Quarter extends ParsedContent {
   title: string
@@ -19,40 +15,30 @@ const { data: quarter }: {
 useHead({
   title: quarter.value?.title,
 })
-
-const goBack = () => {
-  if (window?.history?.length > 2) {
-    router.back()
-  } else {
-    return navigateTo('/gems')
-  }
-}
 </script>
 
 <template>
-  <div class="mx-auto max-w-prose">
-    <div class="flex items-center justify-between px-4 sm:px-0">
-      <button @click="goBack" class="p-1.5 transition-colors rounded-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 active:bg-slate-300 dark:active:bg-zinc-600">
-        <ArrowLeftIcon class="h-5 w-5" />
-      </button>
-      <h2 class="font-bold text-center text-lg font-display -mt-0.5 dark:text-zinc-100">{{ quarter.title }}</h2>
-      <div class="h-8 w-8" />
-    </div>
-    <div class="mt-6 overflow-hidden bg-white dark:bg-zinc-900 border-y sm:border border-stone-200 dark:border-zinc-700 shadow sm:rounded-2xl">
-      <ul role="list" class="divide-y divide-stone-200 dark:divide-zinc-700">
-        <li v-for="(g, i) in quarter?.gems" :key="g.location">
-          <div v-if="!g.text" class="flex justify-center px-4 py-4 font-medium">
-            Немає перлини
-          </div>
-          <div v-else class="flex items-center px-4 py-4">
-            <div class="min-w-0 flex-1 flex flex-col">
-              <TheBadge size="lg" :color="Object.keys(colors)[i]" class="self-center">Тиждень {{ i + 1 }}</TheBadge>
-              <div class="mt-2 pl-0.5 sm:pl-0" v-html="g.text" />
-              <TheBadge size="base" class="mt-2 self-end">{{ g.location }}</TheBadge>
+  <TheHeader />
+
+  <main class="py-8 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-prose">
+      <PageHeading :title="quarter.title" />
+      <div class="mt-6 overflow-hidden bg-white dark:bg-zinc-900 border-y sm:border border-stone-200 dark:border-zinc-700 shadow sm:rounded-2xl">
+        <ul role="list" class="divide-y divide-stone-200 dark:divide-zinc-700">
+          <li v-for="(g, i) in quarter?.gems" :key="g.location">
+            <div v-if="!g.text" class="flex justify-center px-4 py-4 font-medium">
+              Немає перлини
             </div>
-          </div>
-        </li>
-      </ul>
+            <div v-else class="flex items-center px-4 py-4">
+              <div class="min-w-0 flex-1 flex flex-col">
+                <TheBadge size="lg" :color="Object.keys(getColors())[i]" class="self-center">Тиждень {{ i + 1 }}</TheBadge>
+                <div class="mt-2 pl-0.5 sm:pl-0" v-html="g.text" />
+                <TheBadge size="base" class="mt-2 self-end">{{ g.location }}</TheBadge>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </main>
 </template>

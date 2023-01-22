@@ -4,6 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 module.exports = <Partial<Config>>{
   content: [
     'utils/**/*.ts',
+    'content/**/*.md'
   ],
   theme: {
     extend: {

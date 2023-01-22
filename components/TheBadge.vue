@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import {sizes, colors} from '~/utils/getBadgeProperties'
+import {sizes} from '~/utils/getBadgeProperties'
+
+const colors = getColors()
 
 withDefaults(defineProps<{
   size?: Size
