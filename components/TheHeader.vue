@@ -27,7 +27,7 @@ onMounted(() => {
       </nav>
       <div class="ml-auto flex items-center gap-2">
         <NuxtLink to="https://github.com/pathfinders-ua/website" target="_blank" class="p-1.5 rounded-full transition-colors" :class="switcherClassWithDefault">
-          <IconGitHub :class="!y ? 'h-6 w-6' : 'h-5 w-5'" />
+          <IconGitHub class="transition-sizes duration-500" :class="!y ? 'h-6 w-6' : 'h-5 w-5'" />
         </NuxtLink>
         <ColorModeSwither class="-mb-0.5" :y="y" />
       </div>
