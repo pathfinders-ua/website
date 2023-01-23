@@ -15,7 +15,7 @@ const gem = await getCurrentGem()
 
   <main class="py-8 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-prose">
-      <div class="border-y sm:border border-slate-300 dark:border-zinc-700 shadow sm:rounded-2xl py-3 px-4 bg-yellow-50 dark:bg-zinc-800 dark:text-yellow-50">
+      <div class="border-y sm:border border-slate-300 dark:border-zinc-700 shadow sm:rounded-2xl py-3 px-4 bg-yellow-50 dark:bg-zinc-800 dark:text-zinc-50">
         <div v-html="gem.text"></div>
         <hr class="my-2 border-stone-200 dark:border-zinc-700" />
         <div class="flex items-center justify-between font-display">
