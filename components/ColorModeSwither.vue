@@ -10,11 +10,7 @@ withDefaults(defineProps<{
 const colorMode = useColorMode()
 const switcherClass = useSwitcherClass()
 
-const switcherClassWithDefault = ref('hover:bg-slate-700 dark:hover:bg-zinc-700')
-
-onMounted(() => {
-  switcherClassWithDefault.value = switcherClass.value as string ?? switcherClassWithDefault.value
-})
+const switcherClassWithDefault = computed(() => switcherClass.value ?? 'hover:bg-slate-700 dark:hover:bg-zinc-700')
 
 const temporallyDisableTransitions = () => {
   document.documentElement.classList.add('[&_*]:!transition-none')

@@ -9,7 +9,7 @@ useHead({
     <Body class="h-full" />
   </Html>
 
-  <div class="min-h-full bg-slate-50 dark:bg-stone-900 pt-16">
+  <div class="min-h-full flex flex-col bg-slate-50 dark:bg-stone-900 pt-16">
     <slot />
   </div>
 </template>

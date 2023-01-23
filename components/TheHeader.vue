@@ -3,7 +3,7 @@ const el = useDocumentElement()
 const { y } = useScroll(el)
 
 const switcherClass = useSwitcherClass()
-const switcherClassWithDefault = ref('hover:bg-slate-700 dark:hover:bg-zinc-700')
+const switcherClassWithDefault = computed(() => switcherClass.value ?? 'hover:bg-slate-700 dark:hover:bg-zinc-700')
 
 defineProps<{
   background?: string
@@ -11,7 +11,6 @@ defineProps<{
 
 onMounted(() => {
   el.value = document
-  switcherClassWithDefault.value = switcherClass.value as string ?? switcherClassWithDefault.value
 })
 </script>
 

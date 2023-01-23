@@ -36,10 +36,10 @@ useHead({
             <NuxtLink :to="h._path" class="block hover:bg-slate-50 dark:hover:bg-zinc-800">
               <div class="flex items-center px-4 py-4">
                 <div class="flex gap-3 sm:gap-4 min-w-0 flex-1 items-center font-semibold">
-                  <img :src="`/images/honors/${route.params.category}/${h.image}`" :alt="h.title" class="h-12 w-auto" />
+                  <img :src="`/images/honors/${route.params.category}/${h.image}`" :alt="h.title" class="w-14 h-auto" />
                   <div class="flex flex-col gap-2">
                     <div class="pl-0.5 sm:pl-0 dark:text-zinc-50">{{ h.title }}</div>
-                    <TheBadge>Рівень тяжкості: {{ h.level}}</TheBadge>
+                    <TheBadge class="w-max">Рівень тяжкості: {{ h.level}}</TheBadge>
                   </div>
                 </div>
                 <div>
