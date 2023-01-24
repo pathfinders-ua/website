@@ -1,0 +1,4 @@
+---
+title: Природа
+color: stone
+---
