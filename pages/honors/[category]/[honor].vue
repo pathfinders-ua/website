@@ -28,7 +28,7 @@ onUnmounted(() => {
         <NuxtLink :to="`/honors/${route.params.category}`" class="p-1.5 transition-colors rounded-full absolute top-0 left-0" :class="honor.button">
           <ArrowLeftIcon class="h-5 w-5" />
         </NuxtLink>
-        <div class="flex flex-col sm:flex-row items-center gap-6">
+        <div class="flex flex-col sm:flex-row items-center gap-6 sm:px-12">
           <img :src="`/images/honors/${route.params.category}/${honor.image}`" :alt="honor.title" class="h-28 w-auto">
           <div class="flex flex-col gap-4" :class="honor.color">
             <h2 class="font-bold text-3xl text-center sm:text-left font-display -mt-0.5">
