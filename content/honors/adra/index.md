@@ -1,4 +1,4 @@
 ---
 title: ADRA
-color: cyan
+color: purple
 ---
