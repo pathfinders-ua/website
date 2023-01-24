@@ -5,6 +5,7 @@ export const sizes: Record<Size, string> = {
 
 export const getColors = (hover: boolean = false): Record<Color, string> => ({
   gray:   'bg-gray-100   dark:bg-gray-800/50   text-gray-800   dark:text-gray-300'   + (hover ? ' hover:bg-gray-200   dark:hover:bg-gray-700/50   hover:text-gray-900   dark:hover:text-gray-200' : ''),
+  stone:  'bg-stone-100  dark:bg-stone-800/50  text-stone-800  dark:text-stone-300'  + (hover ? ' hover:bg-stone-200  dark:hover:bg-stone-700/50  hover:text-stone-900  dark:hover:text-stone-200' : ''),
   red:    'bg-red-100    dark:bg-red-900/50    text-red-800    dark:text-red-300'    + (hover ? ' hover:bg-red-200    dark:hover:bg-red-800/50    hover:text-red-900    dark:hover:text-red-200' : ''),
   orange: 'bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-300' + (hover ? ' hover:bg-orange-200 dark:hover:bg-orange-800/50 hover:text-orange-900 dark:hover:text-orange-200' : ''),
   yellow: 'bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300' + (hover ? ' hover:bg-yellow-200 dark:hover:bg-yellow-800/50 hover:text-yellow-900 dark:hover:text-yellow-200' : ''),
