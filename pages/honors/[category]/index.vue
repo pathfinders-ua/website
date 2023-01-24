@@ -29,7 +29,7 @@ useHead({
 
   <main class="py-8 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-prose">
-      <PageHeading :title="category.title" />
+      <PageHeading :title="category.title" back="/honors" />
       <div class="mt-8 overflow-hidden bg-white dark:bg-zinc-900 border-y sm:border border-stone-200 dark:border-zinc-700 shadow sm:rounded-2xl">
         <ul role="list" class="divide-y divide-stone-200 dark:divide-zinc-700">
           <li v-for="h in honors" :key="h.title">

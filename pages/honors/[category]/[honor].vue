@@ -25,9 +25,9 @@ onUnmounted(() => {
   <div class="-mt-8 pt-16 pb-4 top-0 right-0 left-0 px-4 sm:px-0" :class="honor.background">
     <div class="mx-auto max-w-prose relative">
       <div class="flex items-start justify-center px-4 sm:px-0">
-        <button @click="goBack" class="p-1.5 transition-colors rounded-full absolute top-0 left-0" :class="honor.button">
+        <NuxtLink :to="`/honors/${route.params.category}`" class="p-1.5 transition-colors rounded-full absolute top-0 left-0" :class="honor.button">
           <ArrowLeftIcon class="h-5 w-5" />
-        </button>
+        </NuxtLink>
         <div class="flex flex-col sm:flex-row items-center gap-6">
           <img :src="`/images/honors/${route.params.category}/${honor.image}`" :alt="honor.title" class="h-28 w-auto">
           <div class="flex flex-col gap-4" :class="honor.color">

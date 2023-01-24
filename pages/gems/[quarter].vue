@@ -22,7 +22,7 @@ useHead({
 
   <main class="py-8 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-prose">
-      <PageHeading :title="quarter.title" />
+      <PageHeading :title="quarter.title" back="/gems" />
       <div class="mt-6 overflow-hidden bg-white dark:bg-zinc-900 border-y sm:border border-stone-200 dark:border-zinc-700 shadow sm:rounded-2xl">
         <ul role="list" class="divide-y divide-stone-200 dark:divide-zinc-700">
           <li v-for="(g, i) in quarter?.gems" :key="g.location">
