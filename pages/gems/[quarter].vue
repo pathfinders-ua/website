@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
-import type { Ref } from 'vue'
 
 interface Quarter extends ParsedContent {
   title: string
@@ -8,9 +7,7 @@ interface Quarter extends ParsedContent {
   gems: Gem[]
 }
 
-const { data: quarter }: {
-  data: Ref<Pick<Quarter, string> | null>
-} = await useAsyncData('gem', () => queryContent('/gems/q' + useRoute().params.quarter).findOne())
+const { data: quarter } = await useAsyncData('gem', () => queryContent<Quarter>('/gems/q' + useRoute().params.quarter).findOne())
 
 useHead({
   title: quarter.value?.title,

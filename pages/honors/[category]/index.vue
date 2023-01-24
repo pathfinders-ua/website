@@ -1,22 +1,20 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from '@heroicons/vue/20/solid/index'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
-import type { Ref } from 'vue'
 
 const route = useRoute()
 
 interface Category extends ParsedContent {
-  title?: string
+  title: string
+  color: string
 }
 
-const { data: category }: {
-  data: Ref<Pick<Category, string> | null>
-} = await useAsyncData(`category-${route.params.category}`, () => (
-  queryContent().where({ _path: route.path }).only(['title']).findOne()
+const { data: category } = await useAsyncData(`category-${route.params.category}`, () => (
+  queryContent<Category>().where({ _path: route.path }).only(['title']).findOne()
 ))
 
 const { data: honors } = await useAsyncData(`honors-${route.params.category}`, () => (
-  queryContent().where({ _dir: route.params.category }).only(['_path', 'title', 'image', 'level']).find()
+  queryContent().where({ _dir: route.params.category }).only(['_path', 'title', 'image', 'level']).sort({ level: 1 }).find()
 ))
 
 useHead({

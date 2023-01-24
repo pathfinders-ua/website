@@ -1,11 +1,25 @@
 <script setup lang="ts">
 import { ArrowLeftIcon } from '@heroicons/vue/20/solid/index'
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const route = useRoute()
 const switcherClass = useSwitcherClass()
 
+interface Honor extends ParsedContent {
+  title: string
+  image: string
+  level: number
+  year: number
+  authority: string
+  color: string
+  background: string
+  switcher: string
+  button: string
+  prose: string
+}
+
 const { data: honor } = await useAsyncData(`honor-${route.params.category}-${route.params.honor}`, () => (
-  queryContent().where({ _path: route.path }).findOne()
+  queryContent<Honor>().where({ _path: route.path }).findOne()
 ))
 
 switcherClass.value = honor.value?.switcher
@@ -47,7 +61,6 @@ onUnmounted(() => {
 
   <main class="flex-1 pt-4 sm:pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-stone-800">
     <div class="mx-auto max-w-prose">
-      <!--suppress JSUnresolvedVariable -->
       <ContentRenderer :value="honor" class="prose prose-li:font-medium dark:prose-invert" :class="honor.prose ?? 'prose-slate'" />
     </div>
   </main>
