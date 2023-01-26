@@ -5,7 +5,7 @@ level: 2
 year: 1928
 authority: Північноамериканський дивізіон
 color: text-black
-background: text-black bg-yellow-400
+background: '[&_nav]:text-black bg-yellow-400'
 switcher: text-black hover:bg-yellow-500/50
 button: text-yellow-50 bg-yellow-500 hover:bg-yellow-500/50 active:bg-yellow-600/75
 prose: prose-yellow
