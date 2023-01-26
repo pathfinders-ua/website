@@ -12,6 +12,9 @@ interface Category extends ParsedContent {
 const { data: category } = await useAsyncData(`category-${route.params.category}`, () => (
   queryContent<Category>().where({ _path: route.path }).only(['title']).findOne()
 ))
+if (!category.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 
 const { data: honors } = await useAsyncData(`honors-${route.params.category}`, () => (
   queryContent().where({ _dir: route.params.category }).only(['_path', 'title', 'image', 'level']).sort({ level: 1 }).find()

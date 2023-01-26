@@ -21,6 +21,9 @@ interface Honor extends ParsedContent {
 const { data: honor } = await useAsyncData(`honor-${route.params.category}-${route.params.honor}`, () => (
   queryContent<Honor>().where({ _path: route.path }).findOne()
 ))
+if (!honor.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 
 switcherClass.value = honor.value?.switcher
 
