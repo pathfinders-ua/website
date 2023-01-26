@@ -21,8 +21,8 @@ onMounted(() => {
         <TheLogo class="w-auto transition-height duration-500" :class="!y ? 'h-8' : 'h-6'" />
       </NuxtLink>
       <nav class="flex items-center gap-4">
-        <NuxtLink to="/gems" class="whitespace-nowrap border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Памʼятні перлини</NuxtLink>
-        <NuxtLink to="/honors" class="whitespace-nowrap border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Спеціалізації</NuxtLink>
+        <NuxtLink to="/gems" class="whitespace-nowrap border-current border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Памʼятні перлини</NuxtLink>
+        <NuxtLink to="/honors" class="whitespace-nowrap border-current border-b pb-[1px]" active-class="font-semibold !border-b-2 !pb-0">Спеціалізації</NuxtLink>
       </nav>
       <div class="ml-auto flex items-center gap-2">
         <NuxtLink to="https://github.com/pathfinders-ua/website" target="_blank" class="p-1.5 rounded-full transition-colors" :class="switcherClassWithDefault">

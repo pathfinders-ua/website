@@ -4,10 +4,10 @@ image: stars.png
 level: 2
 year: 1928
 authority: Північноамериканський дивізіон
-color: text-yellow-50
-background: bg-yellow-600
-switcher: hover:bg-yellow-700
-button: text-yellow-50 bg-yellow-700 hover:bg-yellow-700/25 active:bg-yellow-500
+color: text-black
+background: text-black bg-yellow-400
+switcher: text-black hover:bg-yellow-500/50
+button: text-yellow-50 bg-yellow-500 hover:bg-yellow-500/50 active:bg-yellow-600/75
 prose: prose-yellow
 ---
 

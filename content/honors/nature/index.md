@@ -1,4 +1,4 @@
 ---
 title: Природа
-color: stone
+color: lime
 ---
