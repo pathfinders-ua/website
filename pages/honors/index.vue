@@ -18,7 +18,7 @@ const { data: categories } = await useAsyncData('all-categories', () => (
   <main class="py-8 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-prose">
       <div class="mt-8 overflow-hidden bg-white dark:bg-zinc-900 border-y sm:border border-stone-200 dark:border-zinc-700 shadow sm:rounded-2xl">
-        <ul role="list" class="divide-y divide-stone-200 dark:divide-zinc-700">
+        <ul role="list">
           <li v-for="c in categories" :key="c.title">
             <NuxtLink :to="c._path" class="block" :class="colors[c.color]">
               <div class="flex items-center px-4 py-4">
