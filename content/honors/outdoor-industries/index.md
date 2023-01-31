@@ -1,4 +1,4 @@
 ---
 title: Сільське господарство
-color: orange
+color: brown
 ---

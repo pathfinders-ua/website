@@ -1,4 +1,4 @@
 ---
 title: Побутове мистецтво
-color: yellow
+color: amber
 ---
