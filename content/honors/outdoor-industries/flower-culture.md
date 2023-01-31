@@ -4,11 +4,11 @@ image: flower-culture.png
 level: 1
 year: 1938
 authority: Генеральна Конференція
-color: text-yellow-50
-background: bg-yellow-800
-switcher: hover:bg-yellow-700
-button: text-yellow-50 bg-yellow-900 hover:bg-yellow-900/25 active:bg-yellow-700
-prose: prose-yellow
+color: text-brown-50
+background: bg-brown-800
+switcher: hover:bg-brown-700
+button: text-brown-50 bg-brown-900 hover:bg-brown-900/25 active:bg-brown-700
+prose: prose-brown
 ---
 
 1. Поясніть, що означають терміни "однорічна", "дворічна" та "багаторічна" рослина.
