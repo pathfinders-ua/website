@@ -4,11 +4,11 @@ image: small-fruit-growing.png
 level: 2
 year: 1986
 authority: Генеральна Конференція
-color: text-yellow-50
-background: bg-yellow-800
-switcher: hover:bg-yellow-700
-button: text-yellow-50 bg-yellow-900 hover:bg-yellow-900/25 active:bg-yellow-700
-prose: prose-yellow
+color: text-brown-50
+background: bg-brown-800
+switcher: hover:bg-brown-700
+button: text-brown-50 bg-brown-900 hover:bg-brown-900/25 active:bg-brown-700
+prose: prose-brown
 ---
 
 Примітка: ця нашивка включає вимоги щодо вирощування ягідних культур. Про фрукти, що ростуть на деревах, йдеться у нашивці "Вирощування фруктів".
