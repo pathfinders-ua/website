@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronRightIcon } from '@heroicons/vue/20/solid/index'
+import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const route = useRoute()

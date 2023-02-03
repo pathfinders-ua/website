@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowLeftIcon } from '@heroicons/vue/20/solid/index'
+import { ArrowLeftIcon } from '@heroicons/vue/20/solid'
 
 defineProps<{
   title: string

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SunIcon, MoonIcon } from '@heroicons/vue/24/outline/index'
+import { SunIcon, MoonIcon } from '@heroicons/vue/24/outline'
 
 withDefaults(defineProps<{
   y: number

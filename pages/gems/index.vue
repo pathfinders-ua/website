@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronRightIcon } from '@heroicons/vue/20/solid/index'
+import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 
 useHead({
   title: "Пам'ятні перлини",
