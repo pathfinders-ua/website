@@ -22,6 +22,9 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  build: {
+    transpile: ['@heroicons/vue'],
+  },
   app: {
     head: {
       htmlAttrs: {
