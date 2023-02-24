@@ -33,8 +33,8 @@ const switchColorMode = () => {
 <template>
   <div class="flex items-center">
     <button @click="switchColorMode" class="p-1.5 rounded-full transition-colors" :class="switcherClassWithDefault">
-      <SunIcon class="hidden transition-sizes duration-500 dark:block" :class="!y ? 'h-6 w-6' : 'h-5 w-5'" height="24" width="24" />
-      <MoonIcon class="block transition-sizes duration-500 dark:hidden" :class="!y ? 'h-6 w-6' : 'h-5 w-5'" height="24" width="24" />
+      <SunIcon class="hidden transition-sizes duration-500 dark:block" :class="y <= 0 ? 'h-6 w-6' : 'h-5 w-5'" height="24" width="24" />
+      <MoonIcon class="block transition-sizes duration-500 dark:hidden" :class="y <= 0 ? 'h-6 w-6' : 'h-5 w-5'" height="24" width="24" />
     </button>
   </div>
 </template>
